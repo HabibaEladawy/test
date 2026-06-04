@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
-import '../utils/app_fonts.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_styles.dart';
 
@@ -20,6 +19,7 @@ class CustomButton extends StatelessWidget {
     this.icon,
     this.icon2,
     this.borderRadius,
+    this.useGradient = true,
   });
 
   final void Function()? onTap;
@@ -34,22 +34,34 @@ class CustomButton extends StatelessWidget {
   final Widget? icon;
   final Widget? icon2;
   final double? borderRadius;
+  final bool useGradient;
+
+  static const Gradient defaultGradient = LinearGradient(
+    colors: [AppColors.primaryColor, AppColors.secondaryColor],
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+  );
 
   @override
   Widget build(BuildContext context) {
+    final effectiveGradient = useGradient ? defaultGradient : null;
+
     return InkWell(
       onTap: isLoading ? null : onTap,
-      borderRadius: BorderRadius.circular((borderRadius ?? 48).r),
+      borderRadius: BorderRadius.circular((borderRadius ?? 32).r),
       child: Container(
-        height: height ?? 50.h,
+        height: height ?? 60.h,
         width: width,
         decoration: BoxDecoration(
-          color: color ?? AppColors.primaryColor,
+          color: effectiveGradient == null
+              ? (color ?? AppColors.primaryColor)
+              : null,
+          gradient: effectiveGradient,
           border: Border.all(
-            color: bordercolor ?? AppColors.primaryColor,
+            color: bordercolor ?? Colors.transparent,
             width: 1.2,
           ),
-          borderRadius: BorderRadius.circular((borderRadius ?? 48).r),
+          borderRadius: BorderRadius.circular((borderRadius ?? 32).r),
         ),
         child: Center(
           child: ConditionalBuilder(
@@ -59,12 +71,15 @@ class CustomButton extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (icon != null) ...[icon!, SizedBox(width: 8.w)],
+
                 Text(
                   data ?? "",
-                  style: buttonTextStyle(
+                  style: getBoldStyle(
+                    fontSize: fontSize ?? 24,
                     color: txtcolor ?? AppColors.white,
-                  ).copyWith(fontSize: fontSize ??16.sp),
+                  ),
                 ),
+
                 if (icon2 != null) ...[SizedBox(width: 8.w), icon2!],
               ],
             ),
