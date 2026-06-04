@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'app_fonts.dart';
 import '../utils/app_colors.dart';
+import '../utils/app_fonts.dart';
 
 class CustomToast {
   static void showSuccess(
@@ -16,7 +17,7 @@ class CustomToast {
       timeInSecForIosWeb: duration.inSeconds,
       backgroundColor: AppColors.successColor,
       textColor: Colors.white,
-      fontSize: AppFonts.bodyMedium,
+      fontSize:16.sp,
     );
   }
 
@@ -32,7 +33,7 @@ class CustomToast {
       timeInSecForIosWeb: duration.inSeconds,
       backgroundColor: AppColors.errorColor,
       textColor: Colors.white,
-      fontSize: AppFonts.bodyMedium,
+      fontSize: 16.sp,
     );
   }
 
@@ -48,7 +49,7 @@ class CustomToast {
       timeInSecForIosWeb: duration.inSeconds,
       backgroundColor: AppColors.infoColor,
       textColor: Colors.white,
-      fontSize: AppFonts.bodyMedium,
+      fontSize: 16.sp,
     );
   }
 
@@ -64,7 +65,7 @@ class CustomToast {
       timeInSecForIosWeb: duration.inSeconds,
       backgroundColor: AppColors.warningColor,
       textColor: Colors.black87,
-      fontSize: AppFonts.bodyMedium,
+      fontSize: 16.sp,
     );
   }
 
@@ -82,7 +83,7 @@ class CustomToast {
       timeInSecForIosWeb: duration.inSeconds,
       backgroundColor: backgroundColor ?? AppColors.primaryColor,
       textColor: textColor ?? Colors.white,
-      fontSize: AppFonts.bodyMedium,
+      fontSize: 16.sp,
     );
   }
 }

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
-import 'app_fonts.dart';
+import '../utils/app_fonts.dart';
 import '../utils/app_colors.dart';
+import '../utils/app_styles.dart';
 
 class CustomButton extends StatelessWidget {
   const CustomButton({
@@ -60,9 +61,9 @@ class CustomButton extends StatelessWidget {
                 if (icon != null) ...[icon!, SizedBox(width: 8.w)],
                 Text(
                   data ?? "",
-                  style: AppFonts.buttonTextStyle(
+                  style: buttonTextStyle(
                     color: txtcolor ?? AppColors.white,
-                  ).copyWith(fontSize: fontSize ?? AppFonts.buttonTextSize),
+                  ).copyWith(fontSize: fontSize ??16.sp),
                 ),
                 if (icon2 != null) ...[SizedBox(width: 8.w), icon2!],
               ],

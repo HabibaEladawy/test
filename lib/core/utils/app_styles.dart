@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import '../constant/app_fonts.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'app_fonts.dart';
 
 TextStyle _getTextStyle(
   double fontSize,
@@ -72,6 +73,73 @@ TextStyle getBoldStyle({
   return _getTextStyle(fontSize, FontWeight.bold, color, height, decoration);
 }
 
+// Named Text Styles
+TextStyle titleLargeStyle({
+  required Color color,
+  double? height,
+  TextDecoration? decoration,
+}) {
+  return getMediumStyle(
+    fontSize: 18.sp,
+    color: color,
+    height: height,
+    decoration: decoration,
+  );
+}
+
+TextStyle inputTextStyle({
+  required Color color,
+  double? height,
+  TextDecoration? decoration,
+}) {
+  return getRegularStyle(
+    fontSize: 16.sp,
+    color: color,
+    height: height,
+    decoration: decoration,
+  );
+}
+
+TextStyle bodyMediumStyle({
+  required Color color,
+  double? height,
+  TextDecoration? decoration,
+}) {
+  return getRegularStyle(
+    fontSize: 14.sp,
+    color: color,
+    height: height,
+    decoration: decoration,
+  );
+}
+
+TextStyle labelSmallStyle({
+  required Color color,
+  double? height,
+  TextDecoration? decoration,
+}) {
+  return getLightStyle(
+    fontSize: 12.sp,
+    color: color,
+    height: height,
+    decoration: decoration,
+  );
+}
+
+TextStyle buttonTextStyle({
+  required Color color,
+  double? height,
+  TextDecoration? decoration,
+}) {
+  return getMediumStyle(
+    fontSize: 16.sp,
+    color: color,
+    height: height,
+    decoration: decoration,
+  );
+}
+
+// Text Direction Helpers
 TextDirection getTextDirectionFromText(String text) {
   final arabicRegex = RegExp(r'[\u0600-\u06FF]');
   return arabicRegex.hasMatch(text) ? TextDirection.rtl : TextDirection.ltr;

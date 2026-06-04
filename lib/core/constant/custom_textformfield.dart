@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../utils/app_colors.dart';
-import 'app_fonts.dart';
+import '../utils/app_styles.dart';
 
 class CustomTextformfeild extends StatefulWidget {
   const CustomTextformfeild({
@@ -60,7 +60,7 @@ class _CustomTextformfeildState extends State<CustomTextformfeild> {
               padding: EdgeInsetsDirectional.only(bottom: 5.h),
               child: Text(
                 widget.labelText!,
-                style: AppFonts.titleLargeStyle(
+                style: titleLargeStyle(
                   color: widget.labelcolor ?? AppColors.primaryColor,
                 ),
               ),
@@ -78,7 +78,7 @@ class _CustomTextformfeildState extends State<CustomTextformfeild> {
                 child: Center(
                   child: Text(
                     widget.prefixText!,
-                    style: AppFonts.inputTextStyle(
+                    style: inputTextStyle(
                       color: AppColors.textPrimaryColor,
                     ),
                   ),
@@ -103,7 +103,7 @@ class _CustomTextformfeildState extends State<CustomTextformfeild> {
             padding: EdgeInsetsDirectional.only(bottom: 5.h),
             child: Text(
               widget.labelText!,
-              style: AppFonts.titleLargeStyle(
+              style: titleLargeStyle(
                 color: widget.labelcolor ?? AppColors.primaryColor,
               ),
             ),
@@ -124,17 +124,17 @@ class _CustomTextformfeildState extends State<CustomTextformfeild> {
       textDirection: isRTL ? TextDirection.rtl : TextDirection.ltr,
       textAlign: isRTL ? TextAlign.right : TextAlign.left,
       onTapOutside: (_) => FocusManager.instance.primaryFocus?.unfocus(),
-      style: AppFonts.inputTextStyle(color: AppColors.textPrimaryColor),
+      style: inputTextStyle(color: AppColors.textPrimaryColor),
       keyboardType: widget.keyboardType,
       decoration: InputDecoration(
         errorText: widget.errorText,
         hintText: widget.hintText,
-        hintStyle: AppFonts.bodyMediumStyle(color: AppColors.textLightColor),
+        hintStyle: bodyMediumStyle(color: AppColors.textLightColor),
         contentPadding: EdgeInsetsDirectional.symmetric(
           horizontal: 12.w,
           vertical: 14.h,
         ),
-        errorStyle: AppFonts.labelSmallStyle(
+        errorStyle: labelSmallStyle(
           color: AppColors.errorColor,
         ).copyWith(height: 1.h),
         helperText: null,
