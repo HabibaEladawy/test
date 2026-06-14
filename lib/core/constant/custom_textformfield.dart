@@ -21,6 +21,14 @@ class CustomTextformfeild extends StatefulWidget {
     this.isPhoneField = false,
     this.errorText,
     this.onChanged,
+    this.hintStyle,
+    this.textDirection,
+    this.onPrefixTextTap,
+    this.passwordIconColor,
+    this.contentPaddingVertical,
+    this.passwordIconSize,
+    this.borderColor,
+    this.borderWidth,
     super.key,
   });
 
@@ -39,6 +47,16 @@ class CustomTextformfeild extends StatefulWidget {
   final double? borderRadius;
   final String? errorText;
   final void Function(String)? onChanged;
+  final TextDirection? textDirection;
+  final TextStyle? hintStyle;
+  final double? passwordIconSize;
+  final Color? passwordIconColor;
+  final VoidCallback? onPrefixTextTap;
+  final Color? borderColor;
+  final double? borderWidth;
+  final double? contentPaddingVertical;
+
+
 
   @override
   State<CustomTextformfeild> createState() => _CustomTextformfeildState();
@@ -84,9 +102,7 @@ class _CustomTextformfeildState extends State<CustomTextformfeild> {
                   ),
                 ),
               ),
-
               SizedBox(width: 4.w),
-
               Expanded(child: _buildTextField(isRTL)),
             ],
           ),
@@ -94,7 +110,6 @@ class _CustomTextformfeildState extends State<CustomTextformfeild> {
       );
     }
 
-    // Normal field
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -114,6 +129,9 @@ class _CustomTextformfeildState extends State<CustomTextformfeild> {
   }
 
   Widget _buildTextField(bool isRTL) {
+    final direction = widget.textDirection ??
+        (isRTL ? TextDirection.rtl : TextDirection.ltr);
+
     return TextFormField(
       key: widget.formFieldKey,
       validator: widget.validator,
@@ -121,30 +139,50 @@ class _CustomTextformfeildState extends State<CustomTextformfeild> {
       onChanged: widget.onChanged,
       autofocus: false,
       obscureText: widget.isPassword ? _obscureText : false,
-      textDirection: isRTL ? TextDirection.rtl : TextDirection.ltr,
-      textAlign: isRTL ? TextAlign.right : TextAlign.left,
+      textDirection: direction,
+      textAlign:
+      direction == TextDirection.rtl ? TextAlign.right : TextAlign.left,
       onTapOutside: (_) => FocusManager.instance.primaryFocus?.unfocus(),
       style: inputTextStyle(color: AppColors.textPrimaryColor),
       keyboardType: widget.keyboardType,
       decoration: InputDecoration(
-        errorText: widget.errorText,
-        hintText: widget.hintText,
-        hintStyle: bodyMediumStyle(color: AppColors.textLightColor),
         contentPadding: EdgeInsetsDirectional.symmetric(
           horizontal: 12.w,
-          vertical: 14.h,
+          vertical: widget.contentPaddingVertical ?? 14.h,
         ),
+        hintStyle: widget.hintStyle ?? bodyMediumStyle(color: AppColors.textLightColor),
+        errorText: widget.errorText,
+        hintText: widget.hintText,
+        // hintStyle: bodyMediumStyle(color: AppColors.textLightColor),
+        // contentPadding: EdgeInsetsDirectional.symmetric(
+        //   horizontal: 12.w,
+        //   vertical: 14.h,
+        // ),
         errorStyle: labelSmallStyle(
           color: AppColors.errorColor,
         ).copyWith(height: 1.h),
         helperText: null,
+        // border: OutlineInputBorder(
+        //   borderRadius: BorderRadius.circular(widget.borderRadius ?? 50.r),
+        //   borderSide: BorderSide(color: AppColors.borderColor),
+        // ),
+        // enabledBorder: OutlineInputBorder(
+        //   borderRadius: BorderRadius.circular(widget.borderRadius ?? 50.r),
+        //   borderSide: BorderSide(color: AppColors.borderColor),
+        // ),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(widget.borderRadius ?? 50.r),
-          borderSide: BorderSide(color: AppColors.borderColor),
+          borderSide: BorderSide(
+            color: widget.borderColor ?? AppColors.borderColor,
+            width: widget.borderWidth ?? 1.0,
+          ),
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(widget.borderRadius ?? 50.r),
-          borderSide: BorderSide(color: AppColors.borderColor),
+          borderSide: BorderSide(
+            color: widget.borderColor ?? AppColors.borderColor,
+            width: widget.borderWidth ?? 1.0,
+          ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(widget.borderRadius ?? 50.r),
@@ -155,29 +193,48 @@ class _CustomTextformfeildState extends State<CustomTextformfeild> {
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(widget.borderRadius ?? 50.r),
-          borderSide: const BorderSide(color: AppColors.errorColor, width: 1.5),
+          borderSide:
+          const BorderSide(color: AppColors.errorColor, width: 1.5),
         ),
-        prefixIcon: widget.prefixIcon,
-        suffixIconConstraints: BoxConstraints(minWidth: 50.w, minHeight: 50.h),
-        suffixIcon: widget.isPassword
+        // prefixIcon: widget.prefixIcon,
+        // suffixIconConstraints: BoxConstraints(minWidth: 50.w, minHeight: 50.h),
+        // suffixIcon: widget.isPassword
+        //     ? IconButton(
+        //   icon: Icon(
+        //     _obscureText ? Icons.visibility_off : Icons.visibility,
+        //     color: AppColors.textSecondaryColor,
+        //     size: 24.sp,
+        //   ),
+        //   onPressed: () {
+        //     setState(() {
+        //       _obscureText = !_obscureText;
+        //     });
+        //   },
+        // )
+        //
+          //     : widget.suffixIcon != null
+        suffixIcon: widget.prefixIcon,
+        suffixIconConstraints: BoxConstraints(minWidth: 40.w, minHeight: 40.h),
+        prefixIcon: widget.isPassword
             ? IconButton(
-                icon: Icon(
-                  _obscureText ? Icons.visibility_off : Icons.visibility,
-                  color: AppColors.textSecondaryColor,
-                  size: 24.sp,
-                ),
-                onPressed: () {
-                  setState(() {
-                    _obscureText = !_obscureText;
-                  });
-                },
-              )
+
+          icon: Icon(
+            _obscureText ? Icons.visibility_off : Icons.visibility,
+            color: widget.passwordIconColor ?? AppColors.textSecondaryColor,
+            size: widget.passwordIconSize ?? 24.sp,
+          ),
+          onPressed: () {
+            setState(() {
+              _obscureText = !_obscureText;
+            });
+          },
+        )
             : widget.suffixIcon != null
             ? SizedBox(
-                width: 50.w,
-                height: 50.h,
-                child: Center(child: widget.suffixIcon!),
-              )
+          width: 50.w,
+          height: 50.h,
+          child: Center(child: widget.suffixIcon!),
+        )
             : null,
       ),
     );

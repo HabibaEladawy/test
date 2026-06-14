@@ -14,11 +14,21 @@ import 'package:flutter/widgets.dart';
 class $AssetsPngGen {
   const $AssetsPngGen();
 
+  /// File path: assets/png/bg_login.png
+  AssetGenImage get bgLogin => const AssetGenImage('assets/png/bg_login.png');
+
+  /// File path: assets/png/icon_return.png
+  AssetGenImage get iconReturn =>
+      const AssetGenImage('assets/png/icon_return.png');
+
   /// File path: assets/png/logo.png
   AssetGenImage get logo => const AssetGenImage('assets/png/logo.png');
 
+  /// File path: assets/png/sucess.png
+  AssetGenImage get sucess => const AssetGenImage('assets/png/sucess.png');
+
   /// List of all assets
-  List<AssetGenImage> get values => [logo];
+  List<AssetGenImage> get values => [bgLogin, iconReturn, logo, sucess];
 }
 
 class $AssetsSvgGen {
@@ -27,8 +37,11 @@ class $AssetsSvgGen {
   /// File path: assets/svg/google.svg
   String get google => 'assets/svg/google.svg';
 
+  /// File path: assets/svg/icon_apple.svg
+  String get iconApple => 'assets/svg/icon_apple.svg';
+
   /// List of all assets
-  List<String> get values => [google];
+  List<String> get values => [google, iconApple];
 }
 
 class Assets {
