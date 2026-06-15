@@ -8,10 +8,19 @@ import '../utils/values_manager.dart';
 import 'custom_png_image.dart';
 
 class CustomHeader extends StatelessWidget {
-  const CustomHeader({super.key, required this.title, required this.subTitle,this.bottomSpacing,});
+  const CustomHeader({
+    super.key,
+    required this.title,
+    required this.subTitle,
+    this.bottomSpacing,
+    this.titleSubtitleSpacing,
+  });
+
   final String title;
   final String subTitle;
   final double? bottomSpacing;
+  final double? titleSubtitleSpacing;
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,13 +39,12 @@ class CustomHeader extends StatelessWidget {
               ),
             ),
             CustomPngImage(
-              path: Assets.png.logo.path,///الصوره مش مظبوطه
+              path: Assets.png.logo.path,
               width: AppSize.s88.w,
               height: AppSize.s51.h,
             ),
           ],
         ),
-
         Text(
           title,
           style: getMediumStyle(
@@ -44,13 +52,12 @@ class CustomHeader extends StatelessWidget {
             color: AppColors.primaryColor,
           ),
         ),
-        verticalSpace(8),
+        verticalSpace(titleSubtitleSpacing ?? 8),
         Text(
           subTitle,
           style: getMediumStyle(
             fontSize: AppSize.s14,
-            color: Color(0xFF333333),///name
-
+            color: AppColors.textDark,
           ),
           textAlign: TextAlign.right,
         ),

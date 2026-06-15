@@ -9,7 +9,8 @@ class SignInButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomButton(
+    return
+      CustomButton(
       onTap: () {},
       data: 'تسجيل دخول',
       width: 327.w,

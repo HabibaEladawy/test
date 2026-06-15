@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:rawaquh/core/constant/social_button.dart';
 
 import '../../gen/assets.gen.dart';
+import '../helpers/specing.dart';
 
 class CustomSocialButtons extends StatelessWidget {
   const CustomSocialButtons({super.key});
@@ -12,10 +13,8 @@ class CustomSocialButtons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         SocialButton(icon: Assets.svg.google, onTap: () {}),
-        SizedBox(width: 23),
-
-        ///AppSpecing =>
-        SocialButton(icon: Assets.svg.google, onTap: () {}),/// مش راضيه تظهر
+        horizontalSpace(23),
+        SocialButton(icon: Assets.svg.iconApple, onTap: () {}),
       ],
     );
   }

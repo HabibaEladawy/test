@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../utils/app_colors.dart';
 import '../utils/app_styles.dart';
 import '../utils/values_manager.dart';
 
@@ -19,7 +20,7 @@ class OrDivider extends StatelessWidget {
             'Or Sign In With',
             style: getMediumStyle(
               fontSize: AppSize.s14,
-              color: Color(0xFF666666),
+              color: AppColors.grey3,
             ),
           ),
         ),

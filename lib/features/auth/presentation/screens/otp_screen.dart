@@ -37,7 +37,7 @@ class _OtpScreenState extends State<OtpScreen> {
                 'ادخل رمز التحقق',
                 style: getMediumStyle(
                   fontSize: AppSize.s14,
-                  color: Color(0xFF000000),
+                  color: AppColors.black,
                 ),
               ),
             ),
@@ -51,7 +51,7 @@ class _OtpScreenState extends State<OtpScreen> {
               'ينتهي رمز التحقق خلال 3:12',
               style: getMediumStyle(
                 fontSize: AppSize.s12,
-                color: Color(0xFF000000),
+                color: AppColors.black,
               ),
             ),
             verticalSpace(24),
@@ -63,7 +63,7 @@ class _OtpScreenState extends State<OtpScreen> {
               height: 48.h,
               borderRadius: AppSize.s32,
               useGradient: otpController.text.length == 4,
-              color: Color(0xFFD9D9D9),
+              color: AppColors.lightGrey2,
             ),
             verticalSpace(16),
             Row(
@@ -75,7 +75,7 @@ class _OtpScreenState extends State<OtpScreen> {
                     'إعادة إرسال',
                     style: getRegularStyle(
                       fontSize: AppSize.s12,
-                      color: Color(0xFFAF7F0A75),
+                      color: Color(0xFFAF7F0A75),///اللون غلط هنا
                       decoration: TextDecoration.underline,
                     ),
                   ),
@@ -84,7 +84,7 @@ class _OtpScreenState extends State<OtpScreen> {
                   'لم يصلك الرمز؟',
                   style: getRegularStyle(
                     fontSize: AppSize.s12,
-                    color: Color(0xFF615E5E),
+                    color: AppColors.grey5,
                   ),
                 ),
               ],

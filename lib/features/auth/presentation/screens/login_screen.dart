@@ -20,6 +20,7 @@ class LoginScreen extends StatelessWidget {
         ),
         child: const Column(
           children: [
+
             LoginLogoSection(),
             LoginButtonsSection(),
           ],

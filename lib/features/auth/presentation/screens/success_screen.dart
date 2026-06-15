@@ -27,8 +27,7 @@ class SuccessScreen extends StatelessWidget {
           children: [
             verticalSpace(36),
             Container(
-              width: 106.w,
-              height: 105.h,
+
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
@@ -48,7 +47,7 @@ class SuccessScreen extends StatelessWidget {
               'حسابك الحين جاهز ومأمين بالكامل، تقدر تبدأ رحلة الراحة والدلال\n وحجز مواعيدك بكل سهولة',
               style: getMediumStyle(
                 fontSize: AppSize.s12,
-                color: Color(0xFF615E5E),
+                color: AppColors.grey5,
               ),
               textAlign: TextAlign.center,
               textDirection: TextDirection.rtl,
@@ -56,7 +55,7 @@ class SuccessScreen extends StatelessWidget {
             verticalSpace(25),
             CustomButton(
               onTap: () {
-                ///Navigate
+
               },
               data: 'دخول التطبيق',
               width: 327.w,

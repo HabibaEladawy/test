@@ -19,10 +19,10 @@ class LoginButtonsSection extends StatelessWidget {
       width: AppSize.s375.w,
       padding: EdgeInsets.symmetric(
         horizontal: AppSize.s24.w,
-        vertical: AppSize.s100.h,
+        vertical: AppSize.s108.h,
       ),
       decoration: BoxDecoration(
-        color: const Color(0xFFF2F2F2),
+        color: AppColors.scaffoldBackground,
         borderRadius: const BorderRadius.vertical(
           top: Radius.circular(AppSize.s53),
           bottom: Radius.circular(AppSize.s25),
@@ -34,23 +34,24 @@ class LoginButtonsSection extends StatelessWidget {
           children: [
             CustomButton(
               onTap: () {
-                AppFunctions.navigateTo(context,  RegisterScreen());
+                AppFunctions.navigateTo(context, RegisterScreen());
               },
               data: 'انشاء حساب جديد',
             ),
             verticalSpace(AppSpacing.s14),
             CustomButton(
               useGradient: false,
-              color: Colors.white,
+              color: AppColors.white,
               bordercolor: AppColors.secondaryColor,
               txtcolor: AppColors.primaryColor,
-              onTap: () => AppFunctions.navigateTo(context,  SignInScreen()),
+              onTap: () => AppFunctions.navigateTo(context, SignInScreen()),
               data: 'تسجيل الدخول',
-            ),          verticalSpace(AppSize.s53),
+            ),
+            verticalSpace(AppSize.s53),
             TextButton(
               onPressed: () {},
               child: Text(
-                'أو يمكنك التصفح كزائر',///text => AppText
+                'أو يمكنك التصفح كزائر',
                 style: getMediumStyle(
                   fontSize: AppSize.s14.sp,
                   color: AppColors.secondaryColor,

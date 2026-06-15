@@ -7,6 +7,7 @@ class RegisterHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomHeader(title: 'انضم لعالم الرواقة',
-        subTitle: 'خطوات بسيطة تفصلك عن حجز مواعيدك بكل راحة ودلال');
+        subTitle: 'خطوات بسيطة تفصلك عن حجز مواعيدك بكل راحة ودلال',
+    bottomSpacing: 21,);
   }
 }

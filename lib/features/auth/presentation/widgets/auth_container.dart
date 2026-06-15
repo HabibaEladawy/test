@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../../../../core/helpers/specing.dart';
+import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/values_manager.dart';
 import '../../../../gen/assets.gen.dart';
 
@@ -38,8 +39,9 @@ class AuthContainer extends StatelessWidget {
             Expanded(
               child: Container(
                 width: double.infinity,
+                height: double.infinity,
                 decoration: BoxDecoration(
-                  color: Colors.white,
+                  color: AppColors.white,
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(AppSize.s53),
                     bottom: Radius.circular(AppSize.s25),

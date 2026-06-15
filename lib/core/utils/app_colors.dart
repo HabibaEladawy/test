@@ -9,13 +9,21 @@ class AppColors {
   static const Color black = Color(0xFF000000);
   static const Color bordergrey = Color(0xFF777777);
   static const Color grey = Color(0xFFB8B8B8);
+  static const Color lightGrey = Color(0xFFB1B0B0);
+  static const Color lightGrey2 = Color(0xFFD9D9D9);
+  static const Color lightGrey3 = Color(0xFFE7E8E8);
   static const Color grey2 = Color(0xFF939AAD);
-
+ static const Color grey3 = Color(0xFF666666);
+  static const Color grey4 = Color(0xFFB2B2B2);
+  static const Color grey5 = Color(0xFF615E5E);
+  static const Color textDark = Color(0xFF333333);
+  static const Color textDark2 = Color(0xFF2D2C2C);
+  static const Color hintColor = Color(0xFF535252);
   static const Color errorColor = Color(0xFFDC3545);
   static const Color successColor = Color(0xFF28A745);
   static const Color warningColor = Color(0xFFFFC107);
   static const Color infoColor = Color(0xFF17A2B8);
-
+  static const Color scaffoldBackground = Color(0xFFF2F2F2);
   static const Color textPrimaryColor = darkColor;
   static const Color textSecondaryColor = Color(0xFF6C757D);
   static const Color textLightColor = Color(0xFF9E9E9E);

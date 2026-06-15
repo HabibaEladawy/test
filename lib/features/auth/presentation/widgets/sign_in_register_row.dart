@@ -30,7 +30,7 @@ class SignInRegisterRow extends StatelessWidget {
           'جديد على رواقة؟',
           style: getMediumStyle(
             fontSize: AppSize.s14,
-            color: Color(0XFF2D2C2C),
+            color: AppColors.textDark,
           ),
         ),
       ],

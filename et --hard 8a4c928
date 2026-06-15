@@ -1,0 +1,32 @@
+[33mbb02e75[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{0}: reset: moving to HEAD
+[33mbb02e75[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m HEAD@{1}: commit: remove all files from repo
+[33m8a4c928[m HEAD@{2}: Branch: renamed refs/heads/auth to refs/heads/main
+[33m8a4c928[m HEAD@{4}: commit: First commit
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{5}: checkout: moving from splach&onboarding to auth
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{6}: checkout: moving from auth to splach&onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{7}: checkout: moving from splach&onboarding to auth
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{8}: checkout: moving from auth to splach&onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{9}: checkout: moving from splach&onboarding to auth
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{10}: checkout: moving from auth to splach&onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{11}: checkout: moving from splach&onboarding to auth
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{12}: checkout: moving from auth to splach&onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{13}: checkout: moving from splach&onboarding to auth
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{14}: checkout: moving from auth to splach&onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{15}: checkout: moving from splach&onboarding to auth
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{16}: checkout: moving from auth to splach&onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{17}: checkout: moving from splach&onboarding to auth
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{18}: checkout: moving from auth to splach&onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{19}: checkout: moving from splach&onboarding to auth
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{20}: checkout: moving from auth to splach&onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{21}: checkout: moving from master to auth
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{22}: checkout: moving from auth to master
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{23}: checkout: moving from master to auth
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{24}: checkout: moving from splach&onboarding to master
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{25}: checkout: moving from master to splach&onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{26}: checkout: moving from splach&onboarding to master
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{27}: checkout: moving from splach&onboarding to splach&onboarding
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{28}: branch: Reset to origin/splach&onboarding
+[33mf2d160c[m[33m ([m[1;32msplach&onboarding[m[33m)[m HEAD@{29}: checkout: moving from master to splach&onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{30}: checkout: moving from splash_onboarding to master
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{31}: checkout: moving from master to splash_onboarding
+[33m67c867f[m[33m ([m[1;32mmaster[m[33m)[m HEAD@{32}: clone: from https://github.com/Abdelrahman-m2004/rawaquh.git
